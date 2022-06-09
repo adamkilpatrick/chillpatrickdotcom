@@ -12,9 +12,9 @@ services:
     labels:
       - "traefik.docker.network=nginxbridge"
       - "traefik.enable=true"
-      - "traefik.http.routers.landing.rule=Host(`chillpatrick.com`)"
-      - "traefik.http.routers.landing.tls=true"
-      - "traefik.http.routers.landing.tls.certresolver=myresolver"
+      - "traefik.http.routers.chillpatrickdotcom.rule=Host(`chillpatrick.com`)"
+      - "traefik.http.routers.chillpatrickdotcom.tls=true"
+      - "traefik.http.routers.chillpatrickdotcom.tls.certresolver=myresolver"
       - "traefik.port=80"
 
 networks:
