@@ -1,14 +1,14 @@
 version: '2'
 
 services:
-  snakelanding:
+  chillpatrickdotcom:
     image: nginx:latest
     restart: always
     networks:
       - nginxbridge
     volumes:
       - ./index.html:/usr/share/nginx/html/index.html
-    container_name: snakelanding
+    container_name: chillpatrickdotcom
     labels:
       - "traefik.docker.network=nginxbridge"
       - "traefik.enable=true"
