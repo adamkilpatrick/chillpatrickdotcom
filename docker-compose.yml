@@ -1,0 +1,22 @@
+version: '2'
+
+services:
+  snakelanding:
+    image: nginx:latest
+    restart: always
+    networks:
+      - nginxbridge
+    volumes:
+      - ./index.html:/usr/share/nginx/html/index.html
+    container_name: snakelanding
+    labels:
+      - "traefik.docker.network=nginxbridge"
+      - "traefik.enable=true"
+      - "traefik.http.routers.landing.rule=Host(`chillpatrick.com`)"
+      - "traefik.http.routers.landing.tls=true"
+      - "traefik.http.routers.landing.tls.certresolver=myresolver"
+      - "traefik.port=80"
+
+networks:
+  nginxbridge:
+    external: true
