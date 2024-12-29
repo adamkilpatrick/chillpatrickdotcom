@@ -1,10 +1,26 @@
 <html>
 <head>
-    <script>
-        window.location.replace("https://www.youtube.com/channel/UC_vn42woMLuNk5svwzz7XYA");
-    </script>
+    <style>
+        @-moz-keyframes spin { 
+            100% { -moz-transform: rotate(360deg); } 
+        }
+        @-webkit-keyframes spin { 
+            100% { -webkit-transform: rotate(360deg); } 
+        }
+        @keyframes spin { 
+            100% { 
+                -webkit-transform: rotate(360deg); 
+                transform:rotate(360deg); 
+            } 
+        }
+    </style>
 </head>
-<body>
-init
+<body background="./bg.jpg">
+    <a href="https://www.youtube.com/channel/UC_vn42woMLuNk5svwzz7XYA">
+        <img src="./chill.svg" style="filter: opacity(50%) invert(100%); animation: spin 8s linear infinite;"/>
+    </a>
+    <a href="https://weeklybeats.com/chillpatrick">
+        <img src="./chill.svg" style="filter: opacity(50%) invert(100%); animation: spin 4s linear infinite;"/>
+    </a>
 </body>
 </html>
