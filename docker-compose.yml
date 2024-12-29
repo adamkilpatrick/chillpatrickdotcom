@@ -8,6 +8,8 @@ services:
       - nginxbridge
     volumes:
       - ./index.html:/usr/share/nginx/html/index.html
+      - ./chill.svg.html:/usr/share/nginx/html/chill.svg
+      - ./bg.jpg:/usr/share/nginx/html/bg.jpg
     container_name: chillpatrickdotcom
     labels:
       - "traefik.docker.network=nginxbridge"
